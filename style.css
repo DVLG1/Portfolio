@@ -1,1 +1,71 @@
-/* Testeando tudo*/
+* {
+    /* reseta os valores para ficar mais previsivel, e não bugar em alguns navegadores*/
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif; /* seleciona primeira fonte, se não estiver instalada vai pra segunda e dai vai  */
+  line-height: 1.6; 
+  background-color: #ffffff;  /* cor do fundo*/
+  color: #000000; /* cor da letra*/ 
+  padding: 0 20px; /* espaço entre a borda (margin) e o conteudo (texto) */
+}
+
+
+header {
+  text-align: center; /* alinha o texto */
+  padding: 20px;
+  background-color: #eaf2ff; /* muda a cor só do header, pq está na parte 'header' */
+  border-bottom: 2px solid #ccc; /* cria uma linha em baixo do texto (nesse caso, como não tem texto, é no fim do header)*/
+}
+
+header img {
+  margin-top: 10px;
+  border-radius: 50%;
+}
+
+/* Menu */
+nav {
+  margin-bottom: 15px; /* cria um espaço em baixo do nav*/
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration:none; 
+  color: #004aad;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #ff4d4d;
+}
+
+/* Seções */
+section {
+  margin: 40px 0;
+}
+
+section h2 {
+  margin-bottom: 15px;
+  color: #004aad;
+  border-bottom: 2px solid #004aad;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* Listas */
+ul {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eaf2ff;
+  margin-top: 40px;
+  border-top: 2px solid #ccc;
+}
