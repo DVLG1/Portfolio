@@ -5,12 +5,15 @@
   <meta charset="UTF-8">
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
   <header>
-    <nav>
+  <!-- nav isolado -->
+  <nav class="navbar">
+    <div class="container">
       <a href="#hero">Início</a>
       <a href="#projetos">Projetos</a>
       <a href="#sobre-mim">Sobre Mim</a>
@@ -18,99 +21,132 @@
       <a href="#formacao">Formação</a>
       <a href="#objetivos">Objetivos</a>
       <a href="#contato">Contato</a>
-    </nav>
+    </div>
+  </nav>
 
+  <!-- título e imagem não ficam fixos -->
+  <div class="container header-content">
     <h1 style="color: darkblue;">Portfólio do Davi</h1>
     <img src="img/foto minha.png" alt="foto minha" width="200">
-  </header>
+  </div>
+</header>
 
-  <section id="hero">
-    <h2>Apresentação</h2>
-    <p>Oi, eu sou o Davi, sou estudante de Análise e Desenvolvimento de Sistemas na Unicuritiba e esse site tem o
-      propósito de mostrar o meu portfólio.</p>
-  </section>
+
+<section id="hero">
+  <div class="container wrap">
+    <!-- coluna texto -->
+    <div class="hero-text">
+      <h2>Apresentação</h2>
+      <p>Oi, eu sou o Davi, sou estudante de Análise e Desenvolvimento de Sistemas na Unicuritiba e esse site tem o propósito de mostrar o meu portfólio.</p>
+      <a class="btn" href="#projetos">Ver projetos</a>
+    </div>
+
+    <!-- coluna imagem (opcional, pode remover se quiser só texto) -->
+    <div class="hero-media">
+     
+    </div>
+  </div>
+</section>
+
 
   <section id="projetos">
+  <div class="container">
     <h2>Projetos</h2>
-    <h3>Meu Portfólio</h3>
-    <p>Site feito em HTML e CSS para me apresentar e mostrar minha evolução como desenvolvedor.</p>
-    <a href="https://github.com/DVLG1/Portfolio" target="_blank">Ver no GitHub</a>
-  </section>
+    <div class="cards">
+      <article class="card">
+        <h3>Meu Portfólio</h3>
+        <p>Site em HTML e CSS mostrando minha evolução.</p>
+        <a class="btn" href="https://github.com/DVLG1/Portfolio" target="_blank">Ver no GitHub</a>
+      </article>
+    </div>
+  </div>
+</section>
+
 
   <section id="sobre-mim">
-    <h2>Sobre Mim</h2>
-    <p>Meu nome é Davi, tenho 18 anos e nasci em 2006. Desde criança sempre fui apaixonado por videogames e
-      computadores, o que despertou em mim a curiosidade de entender como a tecnologia funciona por trás. Esse interesse
-      me levou a seguir carreira na área de TI, e hoje sou estudante de Análise e Desenvolvimento de Sistemas na
-      UniCuritiba.</p>
-    <p>Meu objetivo é me tornar um desenvolvedor fullstack, capaz de trabalhar tanto no front-end quanto no back-end,
-      criando aplicações completas e funcionais. Gosto de aprender novas linguagens e frameworks, e atualmente estudo
-      HTML, CSS e JavaScript, além de já ter contato com Java e Python.</p>
-    <p>Entre minhas qualidades pessoais, sou uma pessoa focada, leal e proativa. Aprendo com facilidade, tenho muita
-      curiosidade e dedicação para evoluir constantemente. Acredito que minha inteligência e minha determinação são
-      pontos fortes que me ajudam a enfrentar desafios e a crescer como desenvolvedor.</p>
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <p>Meu nome é Davi, tenho 18 anos e nasci em 2006. Desde criança sempre fui apaixonado por videogames e
+        computadores, o que despertou em mim a curiosidade de entender como a tecnologia funciona por trás. Esse interesse
+        me levou a seguir carreira na área de TI, e hoje sou estudante de Análise e Desenvolvimento de Sistemas na
+        UniCuritiba.</p>
+      <p>Meu objetivo é me tornar um desenvolvedor fullstack, capaz de trabalhar tanto no front-end quanto no back-end,
+        criando aplicações completas e funcionais. Gosto de aprender novas linguagens e frameworks, e atualmente estudo
+        HTML, CSS e JavaScript, além de já ter contato com Java e Python.</p>
+      <p>Entre minhas qualidades pessoais, sou uma pessoa focada, leal e proativa. Aprendo com facilidade, tenho muita
+        curiosidade e dedicação para evoluir constantemente. Acredito que minha inteligência e minha determinação são
+        pontos fortes que me ajudam a enfrentar desafios e a crescer como desenvolvedor.</p>
+    </div>
   </section>
 
   <section id="habilidades">
-    <h2>Habilidades</h2>
+    <div class="container">
+      <h2>Habilidades</h2>
 
-    <h3>Hard Skills</h3>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Java</li>
-      <li>Python</li>
-      <li>Git e GitHub</li>
-      <li>MySQL</li>
-    </ul>
+      <h3>Hard Skills</h3>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Java</li>
+        <li>Python</li>
+        <li>Git e GitHub</li>
+        <li>MySQL</li>
+      </ul>
 
-    <h3>Soft Skills</h3>
-    <ul>
-      <li>Comunicação</li>
-      <li>Trabalho em equipe</li>
-      <li>Criatividade</li>
-      <li>Resiliência</li>
-      <li>Proatividade</li>
-      <li>Inteligência emocional</li>
-      <li>Capacidade de resolver problemas</li>
-      <li>Adaptabilidade</li>
-      <li>Vontade de aprender</li>
-      <li>Foco e disciplina</li>
-    </ul>
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Comunicação</li>
+        <li>Trabalho em equipe</li>
+        <li>Criatividade</li>
+        <li>Resiliência</li>
+        <li>Proatividade</li>
+        <li>Inteligência emocional</li>
+        <li>Capacidade de resolver problemas</li>
+        <li>Adaptabilidade</li>
+        <li>Vontade de aprender</li>
+        <li>Foco e disciplina</li>
+      </ul>
+    </div>
   </section>
 
   <section id="formacao">
-    <h2>Formação Profissional</h2>
+    <div class="container">
+      <h2>Formação Profissional</h2>
 
-    <h3>Faculdade</h3>
-    <ul>
-      <li>Análise e Desenvolvimento de Sistemas – UniCuritiba (cursando, 2024 - 2026)</li>
-    </ul>
+      <h3>Faculdade</h3>
+      <ul>
+        <li>Análise e Desenvolvimento de Sistemas – UniCuritiba (cursando, 2024 - 2026)</li>
+      </ul>
 
-    <h3>Cursos Extras</h3>
-    <ul>
-      <li>Cisco Academy - Python Essentials 1</li>
-      <li>Oracle Academy - Oracle Database Foundations</li>
-    </ul>
+      <h3>Cursos Extras</h3>
+      <ul>
+        <li>Cisco Academy - Python Essentials 1</li>
+        <li>Oracle Academy - Oracle Database Foundations</li>
+      </ul>
+    </div>
   </section>
 
   <section id="objetivos">
-    <h2>Objetivos</h2>
-    <p>Meu principal objetivo no momento é conquistar uma oportunidade de estágio em desenvolvimento,
-      para ganhar experiência prática e colocar em uso os conhecimentos que venho aprendendo na faculdade
-      e em projetos pessoais.</p>
-    <p>A médio e longo prazo, quero me especializar como desenvolvedor fullstack,
-      dominando tanto o front-end quanto o back-end. Meu grande sonho é evoluir profissionalmente
-      até me tornar um desenvolvedor fullstack sênior, capaz de liderar projetos e contribuir
-      para soluções tecnológicas que façam a diferença.</p>
+    <div class="container">
+      <h2>Objetivos</h2>
+      <p>Meu principal objetivo no momento é conquistar uma oportunidade de estágio em desenvolvimento,
+        para ganhar experiência prática e colocar em uso os conhecimentos que venho aprendendo na faculdade
+        e em projetos pessoais.</p>
+      <p>A médio e longo prazo, quero me especializar como desenvolvedor fullstack,
+        dominando tanto o front-end quanto o back-end. Meu grande sonho é evoluir profissionalmente
+        até me tornar um desenvolvedor fullstack sênior, capaz de liderar projetos e contribuir
+        para soluções tecnológicas que façam a diferença.</p>
+    </div>
   </section>
 
   <footer id="contato">
-    <h2>Informações de Contato</h2>
-    <p><a href="https://www.linkedin.com/in/davi-latif-grecco/" target="_blank">Linkedin</a></p>
-    <p><a href="https://github.com/DVLG1" target="_blank">GitHub</a></p>
-    <p>© 2025 Davi Grecco - Todos os direitos reservados</p>
+    <div class="container">
+      <h2>Informações de Contato</h2>
+      <p><a href="https://www.linkedin.com/in/davi-latif-grecco/" target="_blank">Linkedin</a></p>
+      <p><a href="https://api.whatsapp.com/send?phone=5541988888006" target="_blank">Whatsapp</a></p>
+      <p>© 2025 Davi Grecco - Todos os direitos reservados</p>
+    </div>
   </footer>
 
 </body>
