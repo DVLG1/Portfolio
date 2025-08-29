@@ -10,8 +10,7 @@
 
 <body>
 
-  <header>
-  <!-- nav isolado -->
+  <!-- nav fixa -->
   <nav class="navbar">
     <div class="container">
       <a href="#hero">Início</a>
@@ -24,61 +23,51 @@
     </div>
   </nav>
 
-  <!-- título e imagem não ficam fixos -->
-  <div class="container header-content">
-    <h1 style="color: darkblue;">Portfólio do Davi</h1>
-    <img src="img/foto minha.png" alt="foto minha" width="200">
-  </div>
-</header>
-
-
-<section id="hero">
-  <div class="container wrap">
-    <!-- coluna texto -->
-    <div class="hero-text">
-      <h2>Apresentação</h2>
-      <p>Oi, eu sou o Davi, sou estudante de Análise e Desenvolvimento de Sistemas na Unicuritiba e esse site tem o propósito de mostrar o meu portfólio.</p>
-      <a class="btn" href="#projetos">Ver projetos</a>
+  <!-- header normal -->
+  <header>
+    <div class="container header-content">
+      <h1 style="color: darkblue;">Portfólio do Davi</h1>
+      <img src="img/foto minha.png" alt="foto minha" width="200">
     </div>
+  </header>
 
-    <!-- coluna imagem (opcional, pode remover se quiser só texto) -->
-    <div class="hero-media">
-     
-    </div>
-  </div>
-</section>
-
-
-  <section id="projetos">
-  <div class="container">
-    <h2>Projetos</h2>
-    <div class="cards">
-      <article class="card">
-        <h3>Meu Portfólio</h3>
-        <p>Site em HTML e CSS mostrando minha evolução.</p>
-        <a class="btn" href="https://github.com/DVLG1/Portfolio" target="_blank">Ver no GitHub</a>
-      </article>
-    </div>
-  </div>
-</section>
-
-
-  <section id="sobre-mim">
-    <div class="container">
-      <h2>Sobre Mim</h2>
-      <p>Meu nome é Davi, tenho 18 anos e nasci em 2006. Desde criança sempre fui apaixonado por videogames e
-        computadores, o que despertou em mim a curiosidade de entender como a tecnologia funciona por trás. Esse interesse
-        me levou a seguir carreira na área de TI, e hoje sou estudante de Análise e Desenvolvimento de Sistemas na
-        UniCuritiba.</p>
-      <p>Meu objetivo é me tornar um desenvolvedor fullstack, capaz de trabalhar tanto no front-end quanto no back-end,
-        criando aplicações completas e funcionais. Gosto de aprender novas linguagens e frameworks, e atualmente estudo
-        HTML, CSS e JavaScript, além de já ter contato com Java e Python.</p>
-      <p>Entre minhas qualidades pessoais, sou uma pessoa focada, leal e proativa. Aprendo com facilidade, tenho muita
-        curiosidade e dedicação para evoluir constantemente. Acredito que minha inteligência e minha determinação são
-        pontos fortes que me ajudam a enfrentar desafios e a crescer como desenvolvedor.</p>
+  <!-- hero -->
+  <section id="hero">
+    <div class="container wrap">
+      <div class="hero-text">
+        <h2>Apresentação</h2>
+        <p>Oi, eu sou o Davi, sou estudante de Análise e Desenvolvimento de Sistemas na Unicuritiba e esse site tem o propósito de mostrar o meu portfólio.</p>
+        <a class="btn" href="#projetos">Ver projetos</a>
+      </div>
+      <div class="hero-media"></div>
     </div>
   </section>
 
+  <!-- projetos -->
+  <section id="projetos">
+    <div class="container">
+      <h2>Projetos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Meu Portfólio</h3>
+          <p>Site em HTML e CSS mostrando minha evolução.</p>
+          <a class="btn" href="https://github.com/DVLG1/Portfolio" target="_blank">Ver no GitHub</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- sobre mim -->
+  <section id="sobre-mim">
+    <div class="container">
+      <h2>Sobre Mim</h2>
+      <p>Meu nome é Davi, tenho 18 anos e nasci em 2006. Desde criança sempre fui apaixonado por videogames e computadores, o que despertou em mim a curiosidade de entender como a tecnologia funciona por trás. Esse interesse me levou a seguir carreira na área de TI, e hoje sou estudante de Análise e Desenvolvimento de Sistemas na UniCuritiba.</p>
+      <p>Meu objetivo é me tornar um desenvolvedor fullstack, capaz de trabalhar tanto no front-end quanto no back-end, criando aplicações completas e funcionais. Gosto de aprender novas linguagens e frameworks, e atualmente estudo HTML, CSS e JavaScript, além de já ter contato com Java e Python.</p>
+      <p>Entre minhas qualidades pessoais, sou uma pessoa focada, leal e proativa. Aprendo com facilidade, tenho muita curiosidade e dedicação para evoluir constantemente. Acredito que minha inteligência e minha determinação são pontos fortes que me ajudam a enfrentar desafios e a crescer como desenvolvedor.</p>
+    </div>
+  </section>
+
+  <!-- habilidades -->
   <section id="habilidades">
     <div class="container">
       <h2>Habilidades</h2>
@@ -110,6 +99,7 @@
     </div>
   </section>
 
+  <!-- formação -->
   <section id="formacao">
     <div class="container">
       <h2>Formação Profissional</h2>
@@ -127,19 +117,16 @@
     </div>
   </section>
 
+  <!-- objetivos -->
   <section id="objetivos">
     <div class="container">
       <h2>Objetivos</h2>
-      <p>Meu principal objetivo no momento é conquistar uma oportunidade de estágio em desenvolvimento,
-        para ganhar experiência prática e colocar em uso os conhecimentos que venho aprendendo na faculdade
-        e em projetos pessoais.</p>
-      <p>A médio e longo prazo, quero me especializar como desenvolvedor fullstack,
-        dominando tanto o front-end quanto o back-end. Meu grande sonho é evoluir profissionalmente
-        até me tornar um desenvolvedor fullstack sênior, capaz de liderar projetos e contribuir
-        para soluções tecnológicas que façam a diferença.</p>
+      <p>Meu principal objetivo no momento é conquistar uma oportunidade de estágio em desenvolvimento, para ganhar experiência prática e colocar em uso os conhecimentos que venho aprendendo na faculdade e em projetos pessoais.</p>
+      <p>A médio e longo prazo, quero me especializar como desenvolvedor fullstack, dominando tanto o front-end quanto o back-end. Meu grande sonho é evoluir profissionalmente até me tornar um desenvolvedor fullstack sênior, capaz de liderar projetos e contribuir para soluções tecnológicas que façam a diferença.</p>
     </div>
   </section>
 
+  <!-- contato -->
   <footer id="contato">
     <div class="container">
       <h2>Informações de Contato</h2>

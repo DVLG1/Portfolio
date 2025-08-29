@@ -1,175 +1,93 @@
-/* =========================
-   Reset e base
-========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* padding e borda contam dentro da largura */
-}
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 
-:root{
-  /* Paleta */
+:root {
   --bg: #f7f9ff;
   --ink: #1f2937;
   --brand: #0a43b6;
   --muted: #5b6b83;
-  --brand-soft: #cfe0ff;
-
-  /* Espaçamentos */
-  --space-1: 8px;
-  --space-2: 16px;
-  --space-3: 24px;
-  --space-4: 40px;
-
-  /* Header fixo */
-  --header-h: 220px; /* ajuste conforme a altura real do header */
+  --nav-h: 56px;
+  --space-1: 8px; --space-2: 16px; --space-3: 24px; --space-4: 40px;
 }
 
-html { scroll-behavior: smooth; }
-
 body {
-  font-family: Inter, Arial, Helvetica, sans-serif;
+  font-family: Inter, Arial, sans-serif;
   line-height: 1.6;
   background: var(--bg);
   color: var(--ink);
-  /* Compensa o header fixo para o conteúdo não ficar escondido */
-  padding-top: var(--header-h);
+  padding-top: var(--nav-h); /* compensa nav fixa */
 }
 
-/* Tipografia */
 h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 800; }
 h2 { font-size: 24px; font-weight: 800; margin-bottom: 10px; color: var(--brand); }
 h3 { font-size: 18px; font-weight: 600; }
 p, li { font-size: 16px; }
 
-/* Container universal */
 .container { width: min(1100px, 92%); margin: 0 auto; padding: 0 12px; }
-header, main, section, footer { display: block; }
-section { padding: var(--space-4) 0; scroll-margin-top: calc(var(--header-h) + 10px); }
-.container > h2 { margin-bottom: var(--space-2); }
-.container p { margin: var(--space-1) 0; }
+section { padding: var(--space-4) 0; scroll-margin-top: calc(var(--nav-h) + 10px); }
 
-/* =========================
-   Header fixo (inteiro)
-========================= */
-header {
+/* ================= nav fixa ================= */
+.navbar {
   position: fixed;
   top: 0; left: 0; width: 100%;
+  z-index: 1000;
   background: #eaf2ff;
   border-bottom: 1px solid #d7e4ff;
-  z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  height: var(--nav-h);
+  display: flex; align-items: center;
 }
-
-/* Conteúdo do header: título + foto */
-.header-content {
-  text-align: center;
-  padding: 16px 0;
-}
-
-.header-content img {
-  margin-top: 10px;
-  border-radius: 50%;
-  border: 3px solid #fff;
-  box-shadow: 0 6px 16px rgba(0,0,0,.1);
-  width: 200px; height: 200px; object-fit: cover;
-}
-
-/* Barra de navegação dentro do header */
-.navbar {
-  border-top: 1px solid #d7e4ff;
-  background: #eaf2ff;
-}
-
 .navbar .container {
-  display: flex;
-  justify-content: center;
-  gap: 18px;
-  padding: 10px 0;
+  display: flex; justify-content: center; gap: 18px;
 }
-
 .navbar a {
   color: var(--brand);
   text-decoration: none;
   font-weight: 700;
   position: relative;
 }
-
 .navbar a::after {
-  content: "";
-  position: absolute;
-  left: 0; bottom: -4px;
-  width: 0; height: 2px;
-  background: var(--brand);
+  content: ""; position: absolute; left: 0; bottom: -4px;
+  width: 0; height: 2px; background: var(--brand);
   transition: width .2s;
 }
-
 .navbar a:hover::after { width: 100%; }
 
-/* =========================
-   Hero (grid)
-========================= */
-#hero .wrap {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr; /* texto | imagem */
-  gap: 24px;
-  align-items: center;
-  padding: 24px 0;
+/* header normal */
+header { text-align: center; padding: 20px 0; background: var(--bg); }
+.header-content img {
+  margin-top: 10px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 16px rgba(0,0,0,.1);
 }
 
+/* hero */
+#hero .wrap {
+  display: grid; grid-template-columns: 1.2fr .8fr;
+  gap: 24px; align-items: center; padding: 24px 0;
+}
 #hero .hero-text h2 { margin-bottom: 10px; }
 #hero .hero-text p { margin-bottom: 16px; color: #334155; }
 
-/* Imagem (se usar no hero) */
-#hero .hero-media img {
-  width: 180px; height: 180px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 10px 24px rgba(0,0,0,.12);
-  border: 3px solid #fff;
-  margin: 0 auto; display: block;
-}
-
-/* Botão padrão */
 .btn {
-  display: inline-block;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: var(--brand);
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
+  display: inline-block; padding: 10px 14px;
+  border-radius: 10px; background: var(--brand);
+  color: #fff; text-decoration: none; font-weight: 700;
 }
 .btn:hover { filter: brightness(1.1); }
 
-/* =========================
-   Seções gerais
-========================= */
-section h2 {
-  border-bottom: 3px solid var(--brand-soft);
-  display: inline-block;
-  padding-bottom: 4px;
-}
-
-/* Listas */
-ul { margin-left: 20px; margin-top: 10px; }
-
-/* Habilidades em colunas (desktop) */
 #habilidades ul { columns: 2; gap: 8px; }
 #habilidades li { margin: 6px 0; }
 
-/* Projetos: cards (quando tiver mais itens) */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 16px;
 }
 .card {
-  background: #fff;
-  border: 1px solid #e6eaf5;
-  border-radius: 14px;
-  padding: 16px;
-  box-shadow: 0 8px 24px rgba(10,67,182,.06);
+  background: #fff; border: 1px solid #e6eaf5; border-radius: 14px;
+  padding: 16px; box-shadow: 0 8px 24px rgba(10,67,182,.06);
   transition: transform .12s, box-shadow .12s;
 }
 .card:hover {
@@ -177,27 +95,15 @@ ul { margin-left: 20px; margin-top: 10px; }
   box-shadow: 0 14px 36px rgba(10,67,182,.12);
 }
 
-/* =========================
-   Footer
-========================= */
 footer {
   text-align: center;
   padding: 20px 0;
-  background-color: #eaf2ff;
+  background: #eaf2ff;
   border-top: 2px solid #ccc;
+  margin-top: var(--space-4);
 }
 
-/* =========================
-   Responsivo
-========================= */
 @media (max-width: 800px){
-  /* Header mais compacto no mobile */
-  :root { --header-h: 200px; }
   #hero .wrap { grid-template-columns: 1fr; }
   #habilidades ul { columns: 1; }
-}
-
-@media (max-width: 480px){
-  .header-content img { width: 140px; height: 140px; }
-  :root { --header-h: 180px; }
 }
